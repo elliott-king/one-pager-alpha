@@ -9,6 +9,8 @@ export const EMPTY_ONE_PAGER: OnePagerData = {
   industryTags: [],
   briefDescription: '',
   founders: [],
+  fundraisingStageGoal: 0,
+  fundsRaisedInStage: 0,
 };
 
 const facebook: OnePagerData = {
