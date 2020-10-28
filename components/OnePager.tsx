@@ -29,6 +29,16 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
     });
   }, []);
 
+  const renderVideo = (data: OnePagerData, isLoading: boolean) => {
+    if (!data.pitchVideoLink) return null;
+    return (
+      <React.Fragment>
+        <Diveder50 />
+        <OnePagerVideo onePagerData={data} isLoading={isLoading} />
+      </React.Fragment>
+    );
+  };
+
   return (
     <Box bg='#f2f4f5'>
       <Head>
@@ -48,9 +58,7 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
 
       <OnePagerFinances onePagerData={onePagerData} isLoading={isLoading} />
 
-      <Diveder50 />
-
-      <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading} />
+      {renderVideo(onePagerData, isLoading)}
 
       <Diveder50 />
 
