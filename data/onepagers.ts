@@ -28,6 +28,7 @@ const facebook: OnePagerData = {
   founders: [founders.facebook1, founders.facebook2, founders.facebook3],
   pitchVideoLink: 'https://www.youtube.com/watch?v=WzgNAN3dW-I',
   investors: [investors.investor2],
+  address: "1601 Willow Road, Menlo Park, California 94025, United States",
 };
 
 const lendingClub: OnePagerData = {
@@ -59,6 +60,7 @@ const spotify: OnePagerData = {
   founders: [founders.spotify1, founders.spotify2],
   pitchVideoLink: 'https://www.youtube.com/watch?v=ZDXETBfXSuc&t=166s',
   investors: [investors.investor1],
+  address: '150 Greenwich St 62nd floor, New York, NY 10007',
 };
 
 const workday: OnePagerData = {
@@ -74,6 +76,7 @@ const workday: OnePagerData = {
   fundraisingDetails: 'Develop software platform',
   founders: [founders.workday1, founders.workday2],
   investors: [investors.investor1, investors.investor2],
+  address: 'Empire State Building, 350 5th Ave, New York, NY 10118'
 };
 
 const zynga: OnePagerData = {

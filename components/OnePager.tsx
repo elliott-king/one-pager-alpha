@@ -12,6 +12,7 @@ import { OnePagerOverview } from './OnePagerOverview';
 import { OnePagerFounders } from './OnePagerFounders';
 import { OnePagerFinances } from './OnePagerFinances';
 import { OnePagerVideo } from './OnePagerVideo';
+import { OnePagerMap } from './OnePagerMap';
 
 /** Renders a full one pager based on the onePagerUrl. */
 export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
@@ -39,6 +40,16 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
     );
   };
 
+  const renderMap = (data: OnePagerData, isLoading: boolean) => {
+    if (!data.address) return null;
+    return (
+      <React.Fragment>
+        <Diveder50 />
+        <OnePagerMap onePagerData={data} isLoading={isLoading} />
+      </React.Fragment>
+    );
+  };
+
   return (
     <Box bg='#f2f4f5'>
       <Head>
@@ -53,6 +64,8 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
       <Diveder50 />
 
       <OnePagerFounders onePagerData={onePagerData} isLoading={isLoading} />
+
+      {renderMap(onePagerData, isLoading)}
 
       <Diveder50 />
 

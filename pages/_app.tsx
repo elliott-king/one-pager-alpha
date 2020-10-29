@@ -2,6 +2,7 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from '@chakra-ui/core';
 
 import '../styles/global.scss';
+import "mapbox-gl/dist/mapbox-gl.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
