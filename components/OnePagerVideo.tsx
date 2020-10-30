@@ -13,13 +13,15 @@ export const OnePagerVideo = ({
   onePagerData,
   isLoading,
 }: OnePagerVideoProps) => {
+
+  const embedLink = (link: string) => {
+    const replString = 'watch?v=';
+    return link.replace(replString, 'embed/');
+  };
+  
   return (
     <ContentCard title='Pitch Video' isLoading={isLoading}>
-      <Heading as='h2' size='md' marginRight='10px'>
-        <a href={onePagerData.pitchVideoLink} target='_blank'>
-          Link to Pitch Video
-        </a>
-      </Heading>
+      <iframe width='75%' height='300vh' src={embedLink(onePagerData.pitchVideoLink)} />
     </ContentCard>
   );
 };
