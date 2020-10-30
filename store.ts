@@ -15,7 +15,6 @@ let store;
 const initialState = {
   visited: [],
   hasPaid: false,
-  cooke: '',
 };
 
 const reducer = (state = initialState, action) => {
@@ -48,10 +47,11 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, reducer)
 
+// Needs hacky casting due to TS
 function makeStore(preloadedState = initialState) {
   return createStore(
     persistedReducer,
-    preloadedState,
+    preloadedState as any,
     composeWithDevTools(applyMiddleware()),
   );
 };
